@@ -16,7 +16,3 @@ import HelloWorld from '@/components/hello-world/hello-world.vue'; // @ is an al
 })
 export default class Home extends Vue {}
 </script>
-
-<template src=".home.html"></template>
-<script lang="ts" src=".home.ts"></script>
-<style scoped lang="scss" src=".home.scss"></style>
