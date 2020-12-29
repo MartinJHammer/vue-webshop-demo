@@ -1,29 +1,31 @@
-# vue-test-v2
+# VueTestV2
 
-## Project setup
-```
-npm install
-```
+## Things to figure out
+### Low level
+- Services
+    > https://medium.com/@liutingchun_95744/vue-js-using-a-stateful-angular-like-service-to-organize-your-code-abf109f32ab7
+- RxJS: https://github.com/vuejs/vue-rx
+- State management
+    > Vuex vs Akita.
+- Http / API consumption
+    > GraphQL -> Apollo.
+    > Axios: https://github.com/axios/axios
+- Design: Vuetify -> Has container + responsive.
+- Form system
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Medium level
+- Authentication.
+- Roles.
+- Pagination.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### High level
+- Web shop
+    > Products
+    > Categories
+    > Cart
+    > Checkout
+    > Recommended products
+- Admin area
+    > Categories CRUD
+    > Products CRUD
+- Consumer area
