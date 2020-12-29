@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld msg="So this is my input..."/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '@/components/hello-world/hello-world.vue'; // @ is an alias to /src
 
 @Options({
   components: {
@@ -16,3 +16,7 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+
+<template src=".home.html"></template>
+<script lang="ts" src=".home.ts"></script>
+<style scoped lang="scss" src=".home.scss"></style>
