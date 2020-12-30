@@ -1,7 +1,6 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { TestService } from '../../services/test.service';
 
-
 @Component<HelloWorld>({
   subscriptions() {
     return ({
