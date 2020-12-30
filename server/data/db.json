@@ -1,10 +1,12 @@
 {
   "ids": {
-    "Product": 2
+    "Product": 4
   },
   "models": {
     "Product": {
-      "rhLe8nLQSqmJZk0IR7rv2A-5": "{\"id\":\"rhLe8nLQSqmJZk0IR7rv2A-5\",\"name\":\"string\",\"description\":\"string\",\"price\":0}"
+      "rhLe8nLQSqmJZk0IR7rv2A-5": "{\"id\":\"rhLe8nLQSqmJZk0IR7rv2A-5\",\"name\":\"string\",\"description\":\"string\",\"price\":0}",
+      "rhLe8nLQSqmJZk0IR7rv2A-14": "{\"id\":\"rhLe8nLQSqmJZk0IR7rv2A-14\",\"name\":\"MHW\",\"description\":\"Cool game!\",\"price\":123}",
+      "G_w37mVeRAmcj2069ZqtfA-5": "{\"id\":\"G_w37mVeRAmcj2069ZqtfA-5\",\"name\":\"MHW:Iceborne\",\"description\":\"Cool expansion for cool game!\",\"price\":123}"
     }
   }
 }
