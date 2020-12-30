@@ -5,7 +5,7 @@ export class Product extends Entity {
   @property({
     id: true,
     type: 'string',
-    required: true,
+    required: false,
   })
   id: string;
 

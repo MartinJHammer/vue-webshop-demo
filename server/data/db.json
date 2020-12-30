@@ -1,0 +1,10 @@
+{
+  "ids": {
+    "Product": 2
+  },
+  "models": {
+    "Product": {
+      "rhLe8nLQSqmJZk0IR7rv2A-5": "{\"id\":\"rhLe8nLQSqmJZk0IR7rv2A-5\",\"name\":\"string\",\"description\":\"string\",\"price\":0}"
+    }
+  }
+}
