@@ -1,8 +1,11 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import VueRx from 'vue-rx';
+
 import Home from '../views/home.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueRx);
 
 const routes: Array<RouteConfig> = [
   {
