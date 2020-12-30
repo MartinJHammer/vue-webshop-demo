@@ -3,6 +3,13 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class Product extends Entity {
   @property({
+    id: true,
+    type: 'string',
+    required: true,
+  })
+  id: string;
+
+  @property({
     type: 'string',
     required: true,
   })
