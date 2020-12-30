@@ -1,10 +1,10 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { TestService } from '../../services/test.service';
+import { testService } from '../../main';
 
 @Component<HelloWorld>({
   subscriptions() {
     return ({
-      message$: TestService.getInstance().getMessage$(),
+      message$: testService.getMessage$(),
     });
   },
 })
