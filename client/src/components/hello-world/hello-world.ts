@@ -1,10 +1,11 @@
-import { BehaviorSubject } from 'rxjs';
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { TestService } from '../../services/test.service';
+
 
 @Component<HelloWorld>({
   subscriptions() {
     return ({
-      message$: new BehaviorSubject<string>('Hello from observable!'),
+      message$: TestService.getInstance().getMessage$(),
     });
   },
 })
