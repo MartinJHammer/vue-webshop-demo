@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ProductsIndex from '@/components/products-index/products-index.vue';
+import ProductsIndex from '@/modules/products/components/products-index/products-index.vue';
 
 @Component({
   components: {

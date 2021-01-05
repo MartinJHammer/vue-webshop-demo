@@ -1,5 +1,5 @@
 import { Component,  Vue } from 'vue-property-decorator';
-import { productsService } from '../../main';
+import { productsService } from '../../services/products-services';
 
 @Component<ProductsIndex>({
   subscriptions() {

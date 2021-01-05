@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import VueRx from 'vue-rx';
 
-import Home from '../views/home.vue';
+import Home from './../modules/app/views/home.vue'
 
 Vue.use(VueRouter);
 Vue.use(VueRx);
@@ -19,12 +19,12 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/about.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../modules/app/views/about.vue'),
   },
   {
     path: '/products',
     name: 'products',
-    component: () => import('../views/products.vue'),
+    component: () => import('../modules/products/views/products.vue'),
   },
 ];
 

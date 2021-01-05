@@ -1,5 +1,5 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { testService } from '../../main';
+import { testService } from '../../services/app-services';
 
 @Component<HelloWorld>({
   subscriptions() {
