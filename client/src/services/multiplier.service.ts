@@ -7,7 +7,7 @@ export class MultiplierService implements IMultiplierService {
 
     private constructor() { }
 
-    public static getInstance(): MultiplierService {
+    public static getInstance(deps: any): MultiplierService {
       if (!MultiplierService.instance) {
         MultiplierService.instance = new MultiplierService();
       }

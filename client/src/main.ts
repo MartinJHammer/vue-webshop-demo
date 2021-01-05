@@ -3,13 +3,15 @@ import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import { MultiplierService } from './services/multiplier.service';
+import { ProductsService } from './services/products.service';
 import { TestService } from './services/test.service';
 
 Vue.config.productionTip = false;
-export const multiplierService = MultiplierService.getInstance();
-export const testService = TestService.getInstance({
-  multiplierService
-});
+
+// Register services here.
+export const multiplierService = MultiplierService.getInstance({});
+export const testService = TestService.getInstance({ multiplierService });
+export const productsService = ProductsService.getInstance({});
 
 new Vue({
   router,
