@@ -25,7 +25,15 @@ export class ProductsService {
   private mockData(): Product[] {
     return [
       new Product({
-        name: 'Bander shoe v3',
+        name: 'Suuzie Sandals',
+        description: 'A slick sandal for the fashion-aware modern woman.'
+      }),
+      new Product({
+        name: 'Rookie Sneakers',
+        description: `We're all rookies sometimes. Rookie Snearkers signals a humble and "learn-by-doing" attitude.`
+      }),
+      new Product({
+        name: 'Bander shoes v3',
         description: 'This shoe has been made with the modern pro-trickster in mind.'
       })
     ];

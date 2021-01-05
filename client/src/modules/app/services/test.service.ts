@@ -1,5 +1,5 @@
 import { interval, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 import { IMultiplierService } from './multiplier.service';
 
 export interface TestServiceDependencies {
@@ -24,7 +24,8 @@ export class TestService {
 
   public getMessage$(): Observable<string> {
     return interval(1000).pipe(
-      map((count) => `We are now at: ${this.multiplierService.multiply(count, 3)}`),
+      map((count) => `We are now at: ${this.multiplierService.multiply(count, 1)}`),
+      startWith(`We are now at: 0`)
     );
   }
 }
