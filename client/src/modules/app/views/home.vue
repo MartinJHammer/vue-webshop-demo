@@ -1,8 +1,5 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../../../assets/logo.png">
     <HelloWorld msg="Welcome to ShoesModen - a demo Web Shop to practice Vue.js!"/>
-  </div>
 </template>
 
 <script lang="ts">
