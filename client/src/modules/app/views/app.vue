@@ -1,6 +1,10 @@
 <template>
   <v-app>
+    <!-- App bar -->
     <v-app-bar app color="primary" dark>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <!-- Logo + Name -->
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -11,32 +15,42 @@
           width="40"
         />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <h1>ModernShoes {{ message$ }}</h1>
       </div>
 
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
+    <!-- Navigation drawer -->
+    <NavigationDrawer :open="drawer" v-on:drawer-toggled="drawer = $event" />
+
+    <!-- Router view -->
     <v-main>
       <router-view />
     </v-main>
   </v-app>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import NavigationDrawer from "@/modules/app/components/navigation-drawer/navigation-drawer.vue";
+import { testService } from "../services/app-services";
+
+@Component<App>({
+  components: {
+    NavigationDrawer,
+  },
+  subscriptions() {
+    return {
+      message$: testService.getMessage$(),
+    };
+  },
+  data() {
+    return {
+      drawer: false,
+    };
+  },
+})
+export default class App extends Vue {}
+</script>
 

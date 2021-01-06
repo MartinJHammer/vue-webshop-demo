@@ -24,8 +24,8 @@ export class TestService {
 
   public getMessage$(): Observable<string> {
     return interval(1000).pipe(
-      map((count) => `We are now at: ${this.multiplierService.multiply(count, 1)}`),
-      startWith(`We are now at: 0`)
+      map((count) => `${this.multiplierService.multiply(count, 1)}`),
+      startWith(`0`)
     );
   }
 }
