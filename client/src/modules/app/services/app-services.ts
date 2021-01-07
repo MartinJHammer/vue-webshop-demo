@@ -1,5 +1,3 @@
-import { MultiplierService } from './multiplier.service';
-import { TestService } from './test.service';
+import { NumberService } from './number.service';
 
-export const multiplierService = MultiplierService.getInstance({});
-export const testService = TestService.getInstance({ multiplierService });
+export const numberService = NumberService.getInstance({});

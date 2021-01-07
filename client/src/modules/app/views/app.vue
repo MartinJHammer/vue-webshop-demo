@@ -15,7 +15,7 @@
           width="40"
         />
 
-        <h1>ModernShoes {{ message$ }}</h1>
+        <h1>ModernShoes  <span class="text-caption font-italic">We now have {{ productsCount$ }} products waiting for you to explore 👠</span></h1>
       </div>
 
       <v-spacer></v-spacer>
@@ -34,7 +34,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import NavigationDrawer from "@/modules/app/components/navigation-drawer/navigation-drawer.vue";
-import { testService } from "../services/app-services";
+import { productsService } from '../../products/services/products-services';
 
 @Component<App>({
   components: {
@@ -42,7 +42,7 @@ import { testService } from "../services/app-services";
   },
   subscriptions() {
     return {
-      message$: testService.getMessage$(),
+      productsCount$: productsService.count$(),
     };
   },
   data() {
@@ -53,4 +53,3 @@ import { testService } from "../services/app-services";
 })
 export default class App extends Vue {}
 </script>
-

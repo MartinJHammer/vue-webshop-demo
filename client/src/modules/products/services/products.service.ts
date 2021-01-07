@@ -1,13 +1,18 @@
-import { Observable, of } from 'rxjs';
+import { interval, Observable, of } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
+import { INumberService } from '../../app/services/number.service';
 import { Product } from '../models/product';
 
 export interface ProductsServiceDependencies {
+  numberService: INumberService;
 }
 
 export class ProductsService {
   private static instance: ProductsService;
+  private numberService: INumberService;
 
   private constructor(deps: ProductsServiceDependencies) {
+    this.numberService = deps.numberService;
   }
 
   public static getInstance(deps: ProductsServiceDependencies): ProductsService {
@@ -20,6 +25,13 @@ export class ProductsService {
 
   public get$(): Observable<Product[]> {
     return of(this.mockData());
+  }
+
+  public count$(): Observable<number> {
+    return interval(3000).pipe(
+      map((count) => this.numberService.addition([count, 1536])),
+      startWith(1536)
+    );
   }
 
   private mockData(): Product[] {

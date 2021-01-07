@@ -7,7 +7,7 @@ Vue.use(Vuetify);
 
 enum CustomColors {
     red = '#ad3d3d',
-    purple = '#3d44ad',
+    orange = '#ad7c3d',
 }
 
 const vuetifyConfig = {
@@ -15,9 +15,9 @@ const vuetifyConfig = {
         themes: {
             light: {
                 primary: CustomColors.red,
-                secondary: '#b0bec5',
-                accent: '#8c9eff',
-                error: '#b71c1c',
+                secondary: CustomColors.orange,
+                accent: CustomColors.orange,
+                error: CustomColors.orange,
             } as VuetifyThemeVariant,
         } as VuetifyThemes
     }
