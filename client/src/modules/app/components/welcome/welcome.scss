@@ -1,0 +1,9 @@
+@import './../../../../styles/variables/colors';
+
+.v-card {
+    height: 400px;
+    background-color: $red;
+    .image-container {
+        margin: 0 auto;
+    }
+}
